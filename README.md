@@ -2,6 +2,18 @@
 
 A supporting respository for PWA developed in Nuxt.
 
-Modules used:
-* Nuxtjs/pwa
-* Nuxtjs/toast
+## Modules:
+* nuxtjs/pwa
+* nuxtjs/toast
+* nuxtjs/robots
+
+
+## Features:
+* PWA support
+* Notify updates
+* Version code + update time
+
+
+## Lighthouse Score sheet:
+
+<img src='static/lighthouse.png' />
