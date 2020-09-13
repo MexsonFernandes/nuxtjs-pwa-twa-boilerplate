@@ -24,6 +24,9 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
+    noscript: [
+      { innerHTML: 'Scripts are not supported', body: true }
+    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
