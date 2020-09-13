@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  mounted: function() {
+  mounted: async function () {
     const workbox = await window.$workbox;
     if (workbox) {
       workbox.addEventListener('installed', (event) => {
