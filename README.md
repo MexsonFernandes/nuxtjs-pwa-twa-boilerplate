@@ -1,4 +1,4 @@
-# nuxt-pwa-updates
+# Nuxt PWA + TWA
 
 A supporting respository for PWA developed in Nuxt.
 
@@ -6,10 +6,12 @@ A supporting respository for PWA developed in Nuxt.
 * nuxtjs/pwa
 * nuxtjs/toast
 * nuxtjs/robots
+* nuxt-twa-module
 
 
 ## Features:
 * PWA support
+* TWA support
 * Notify updates
 * Version code + update time
 

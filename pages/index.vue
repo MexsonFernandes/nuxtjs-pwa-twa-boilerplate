@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">Nuxt PWA</h1>
+      <h1 class="title">Nuxt PWA + TWA</h1>
       <h2 v-if="update_time" class="title is-2">
         Last Update: {{ update_time }}
       </h2>

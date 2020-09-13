@@ -1,0 +1,143 @@
+-- Merging decision tree log ---
+application
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:25:5-58:19
+MERGED from [com.github.GoogleChrome.custom-tabs-client:customtabs:e849e45c90] /home/robomex/.gradle/caches/transforms-1/files-1.1/customtabs-e849e45c90.aar/073649c5f9d9de47d84402759fbaf287/AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.GoogleChrome.custom-tabs-client:customtabs:e849e45c90] /home/robomex/.gradle/caches/transforms-1/files-1.1/customtabs-e849e45c90.aar/073649c5f9d9de47d84402759fbaf287/AndroidManifest.xml:22:5-23:19
+	android:supportsRtl
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:29:9-35
+	android:label
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:28:9-40
+	android:icon
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:27:9-43
+	android:allowBackup
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:26:9-35
+	android:theme
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:30:9-47
+meta-data#asset_statements
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:32:9-34:50
+	android:value
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:34:13-47
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:33:13-44
+activity#android.support.customtabs.trusted.LauncherActivity
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:36:9-57:20
+	android:label
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:37:13-44
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:36:19-85
+meta-data#android.support.customtabs.trusted.DEFAULT_URL
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:38:13-39:49
+	android:value
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:39:17-46
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:38:24-85
+data
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:54:17-55:49
+	android:host
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:55:21-47
+	android:scheme
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:54:23-45
+manifest
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+MERGED from [com.github.GoogleChrome.custom-tabs-client:customtabs:e849e45c90] /home/robomex/.gradle/caches/transforms-1/files-1.1/customtabs-e849e45c90.aar/073649c5f9d9de47d84402759fbaf287/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/fffe8955f61d22d1e441354b4345196f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/f6453e433f2f62018223de5b8c2713a4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/68107c888ac18164a46453542f84fc1f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/86ab87a7500b37e84526b492f0c6d4e8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/66f95f571cf6e526751e67b5ad8ccd69/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/6e914dc81e8bec229a8fd5b122349965/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/d7e9a75a94f890c3c1487341074136f0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/22c4b80485f8cf80af8be76fdbf07a4a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/e271b2d17e7f9a8f347a9e257365a9c9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/robomex/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/6cef9b9b32ae89a0c2e5f32d9d6941bf/AndroidManifest.xml:17:1-24:12
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+	package
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:23:5-30
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:1-59:12
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:22:11-69
+uses-sdk
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+MERGED from [com.github.GoogleChrome.custom-tabs-client:customtabs:e849e45c90] /home/robomex/.gradle/caches/transforms-1/files-1.1/customtabs-e849e45c90.aar/073649c5f9d9de47d84402759fbaf287/AndroidManifest.xml:20:5-44
+MERGED from [com.github.GoogleChrome.custom-tabs-client:customtabs:e849e45c90] /home/robomex/.gradle/caches/transforms-1/files-1.1/customtabs-e849e45c90.aar/073649c5f9d9de47d84402759fbaf287/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/fffe8955f61d22d1e441354b4345196f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/fffe8955f61d22d1e441354b4345196f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/f6453e433f2f62018223de5b8c2713a4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/f6453e433f2f62018223de5b8c2713a4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/68107c888ac18164a46453542f84fc1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/68107c888ac18164a46453542f84fc1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/86ab87a7500b37e84526b492f0c6d4e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/86ab87a7500b37e84526b492f0c6d4e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/66f95f571cf6e526751e67b5ad8ccd69/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/66f95f571cf6e526751e67b5ad8ccd69/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/6e914dc81e8bec229a8fd5b122349965/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/6e914dc81e8bec229a8fd5b122349965/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/d7e9a75a94f890c3c1487341074136f0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/d7e9a75a94f890c3c1487341074136f0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/22c4b80485f8cf80af8be76fdbf07a4a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/22c4b80485f8cf80af8be76fdbf07a4a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/e271b2d17e7f9a8f347a9e257365a9c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /home/robomex/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/e271b2d17e7f9a8f347a9e257365a9c9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/robomex/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/6cef9b9b32ae89a0c2e5f32d9d6941bf/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/robomex/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/6cef9b9b32ae89a0c2e5f32d9d6941bf/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml
+meta-data#android.support.customtabs.trusted.STATUS_BAR_COLOR
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:41:13-43:58
+	android:resource
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:43:17-55
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:42:17-83
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:45:13-48:29
+action#android.intent.action.MAIN
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:46:17-69
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:46:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:47:17-77
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:47:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:https://nuxtjs-pwa-boilerplate.vercel.app/+data:scheme:https
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:50:13-56:29
+action#android.intent.action.VIEW
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:51:17-68
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:51:25-66
+category#android.intent.category.DEFAULT
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:52:17-76
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:52:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:53:17-77
+	android:name
+		ADDED from /home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/src/main/AndroidManifest.xml:53:27-75
