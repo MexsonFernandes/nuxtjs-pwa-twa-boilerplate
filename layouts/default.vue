@@ -14,8 +14,6 @@ export default {
         // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
         if (event.isUpdate) {
           // whatever logic you want to use to notify the user that they need to refresh the page.
-          console.log('new update')
-          console.log(event)
           this.$store.commit('checkUpdateAvailable', true)
         }
       })
