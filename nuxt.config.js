@@ -25,7 +25,11 @@ export default {
       },
     ],
     noscript: [{ innerHTML: 'Scripts are not supported', body: true }],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' },
+      { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
+    ],
   },
   /*
    ** Global CSS
