@@ -54,7 +54,6 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
-    '@nuxtjs/pwa',
     '@nuxtjs/robots',
     [
       'nuxt-twa-module',
@@ -76,6 +75,14 @@ export default {
         iconPath: '/static/icon.png',
         /* Overwrite folder where to put .wellknown */
         distFolder: '.nuxt/dist/client',
+      },
+    ],
+    [
+      '@nuxtjs/pwa',
+      {
+        workbox: {
+          clientClaims: false,
+        },
       },
     ],
   ],
