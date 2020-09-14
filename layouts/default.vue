@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  mounted: async function () {
-    const workbox = await window.$workbox;
+  async mounted() {
+    const workbox = await window.$workbox
     if (workbox) {
       workbox.addEventListener('installed', (event) => {
         // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
@@ -16,9 +16,9 @@ export default {
           console.log('new update')
           console.log(event)
         }
-      });
+      })
     }
-  }
+  },
 }
 </script>
 

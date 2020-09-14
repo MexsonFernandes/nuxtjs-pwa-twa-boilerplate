@@ -56,25 +56,28 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
     '@nuxtjs/robots',
-    ['nuxt-twa-module', {
-      /* module options */
-      defaultUrl: 'https:////nuxtjs-pwa-boilerplate.vercel.app/',
-      hostName: 'https://nuxtjs-pwa-boilerplate.vercel.app/',
-      applicationId: 'com.example.nuxt',
-      launcherName: 'Nuxt TWA',
-      versionCode: 1,
-      versionName: '1.0',
-      statusBarColor: '#fff',
-      // The sha256Fingerprints by is an array with one SHA-256 key string.
-      // But if you have multiple you can add them to the array. More information about the website asociation:
-      // https://developer.android.com/training/app-links/verify-site-associations#web-assoc
-      sha256Fingerprints: ['/* your SHA-256 keys */'],
-      /* optional */
-      /* overwrite default location for icon */
-      iconPath: '/static/icon.png',
-      /* Overwrite folder where to put .wellknown */
-      distFolder: '.nuxt/dist/client',
-    }],
+    [
+      'nuxt-twa-module',
+      {
+        /* module options */
+        defaultUrl: 'https:////nuxtjs-pwa-boilerplate.vercel.app/',
+        hostName: 'https://nuxtjs-pwa-boilerplate.vercel.app/',
+        applicationId: 'com.example.nuxt',
+        launcherName: 'Nuxt TWA',
+        versionCode: 1,
+        versionName: '1.0',
+        statusBarColor: '#fff',
+        // The sha256Fingerprints by is an array with one SHA-256 key string.
+        // But if you have multiple you can add them to the array. More information about the website asociation:
+        // https://developer.android.com/training/app-links/verify-site-associations#web-assoc
+        sha256Fingerprints: ['/* your SHA-256 keys */'],
+        /* optional */
+        /* overwrite default location for icon */
+        iconPath: '/static/icon.png',
+        /* Overwrite folder where to put .wellknown */
+        distFolder: '.nuxt/dist/client',
+      },
+    ],
   ],
   /*
    ** Build configuration

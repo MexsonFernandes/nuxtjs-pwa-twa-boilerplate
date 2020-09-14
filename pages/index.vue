@@ -3,22 +3,21 @@
     <div>
       <Logo />
       <h1 class="title">Nuxt PWA + TWA</h1>
-      <h2 v-if="update_time" class="title is-2">
-        Last Update: {{ update_time }}
+      <h2 v-if="$store.state.update_time" class="title is-2">
+        Last Update: {{ $store.state.update_time }}
       </h2>
-      <h2 v-if="version" class="title is-4">{{ version }}</h2>
+      <h2 v-if="$store.state.version" class="title is-4">
+        {{ $store.state.version }}
+      </h2>
+      <h3 v-if="$store.state.update_available" class="title is-6">
+        App Update Available {{ $store.state.update_available ? 'Yes' : 'No' }}
+      </h3>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data: () => ({
-    update_time: null,
-    version: null,
-  }),
-  created: function () {},
-}
+export default {}
 </script>
 
 <style>
