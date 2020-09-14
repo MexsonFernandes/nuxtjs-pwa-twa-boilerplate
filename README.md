@@ -1,5 +1,7 @@
 # Nuxt PWA + TWA
 
+![Lighthouse Audit](https://github.com/MexsonFernandes/nuxtjs-pwa-twa-boilerplate/workflows/Audit%20live%20site/badge.svg)
+
 A supporting respository for PWA developed in Nuxt.
 
 ## Modules:
