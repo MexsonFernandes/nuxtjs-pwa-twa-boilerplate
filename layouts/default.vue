@@ -7,6 +7,7 @@
 <script>
 export default {
   async mounted() {
+    this.$store.commit('checkUpdateAvailable', false)
     const workbox = await window.$workbox
     if (workbox) {
       workbox.addEventListener('installed', (event) => {
@@ -15,6 +16,7 @@ export default {
           // whatever logic you want to use to notify the user that they need to refresh the page.
           console.log('new update')
           console.log(event)
+          this.$store.commit('checkUpdateAvailable', true)
         }
       })
     }

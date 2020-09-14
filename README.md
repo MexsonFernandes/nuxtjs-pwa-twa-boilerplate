@@ -7,6 +7,7 @@ A supporting respository for PWA developed in Nuxt.
 * nuxtjs/toast
 * nuxtjs/robots
 * nuxt-twa-module
+* lighthouse
 
 
 ## Features:
@@ -15,6 +16,8 @@ A supporting respository for PWA developed in Nuxt.
 * Notify updates
 * Version code + update time
 
+## To-Do:
+- [ ] Online/Offline Status Page
 
 ## Lighthouse Score sheet:
 

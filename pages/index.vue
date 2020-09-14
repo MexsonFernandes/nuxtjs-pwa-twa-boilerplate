@@ -9,8 +9,9 @@
       <h2 v-if="$store.state.version" class="title is-4">
         {{ $store.state.version }}
       </h2>
-      <h3 v-if="$store.state.update_available" class="title is-6">
-        App Update Available {{ $store.state.update_available ? 'Yes' : 'No' }}
+      <h3 v-if="$store.state.update_available != null" class="title is-6">
+        <span class="has-text-weight-medium">App Update Available:</span>
+        {{ $store.state.update_available ? 'Yes' : 'No' }}
       </h3>
     </div>
   </div>
