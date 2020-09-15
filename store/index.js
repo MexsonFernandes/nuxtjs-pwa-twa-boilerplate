@@ -1,5 +1,8 @@
+import config from '../nuxt.config'
+
 export const state = () => ({
   update_time: null,
+  app_version: config.app.version || null,
   update_available: null,
 })
 

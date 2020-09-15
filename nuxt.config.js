@@ -105,11 +105,17 @@ export default {
       },
     },
   },
-  manifest: {
-    name: 'Nuxt PWA',
-    lang: 'en',
-    orientation: 'portrait',
-    background_color: '#FFFFFF',
-    theme_color: '#F8F8F8',
+  pwa: {
+    manifest: {
+      name: 'Nuxt PWA + TWA Boilerplate',
+      short_name: 'Nuxt PWA',
+      lang: 'en',
+      orientation: 'portrait',
+      background_color: '#FFFFFF',
+      theme_color: '#F8F8F8',
+    },
+    workbox: {
+      workboxVersion: '2.3',
+    },
   },
 }
