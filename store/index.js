@@ -1,8 +1,9 @@
 import config from '../nuxt.config'
 
 export const state = () => ({
-  update_time: null,
   app_version: config.app.version || null,
+  app_name: config.pwa.manifest.short_name || process.env.npm_package_name,
+  update_time: null,
   update_available: null,
 })
 

@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title is-1">Nuxt PWA + TWA</h1>
+      <h1 class="title is-1">{{ $store.state.app_name }}</h1>
       <h1 v-if="$store.state.update_time" class="title is-2">
         Last Update: {{ $store.state.update_time }}
       </h1>

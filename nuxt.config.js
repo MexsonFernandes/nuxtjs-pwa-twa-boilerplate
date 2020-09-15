@@ -23,7 +23,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Nuxt PWA + TWA',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -107,15 +107,12 @@ export default {
   },
   pwa: {
     manifest: {
-      name: 'Nuxt PWA + TWA Boilerplate',
-      short_name: 'Nuxt PWA',
+      name: 'Nuxtjs PWA + TWA Boilerplate',
+      short_name: 'Nuxt PWA + TWA',
       lang: 'en',
       orientation: 'portrait',
       background_color: '#FFFFFF',
       theme_color: '#F8F8F8',
-    },
-    workbox: {
-      workboxVersion: '2.3',
     },
   },
 }
