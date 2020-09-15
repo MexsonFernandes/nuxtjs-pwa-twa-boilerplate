@@ -1,4 +1,13 @@
+import packageJson from './package.json'
+const version = packageJson.version || null
+
 export default {
+  /*
+   ** PWA App meta data
+   */
+  app: {
+    version,
+  },
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -81,14 +90,7 @@ export default {
         distFolder: '.nuxt/dist/client',
       },
     ],
-    [
-      '@nuxtjs/pwa',
-      {
-        workbox: {
-          clientClaims: false,
-        },
-      },
-    ],
+    '@nuxtjs/pwa',
   ],
   /*
    ** Build configuration

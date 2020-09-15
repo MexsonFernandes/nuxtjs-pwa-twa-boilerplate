@@ -6,11 +6,11 @@
       <h1 v-if="$store.state.update_time" class="title is-2">
         Last Update: {{ $store.state.update_time }}
       </h1>
-      <h1 v-if="$store.state.version" class="title is-4">
-        {{ $store.state.version }}
+      <h1 v-if="version" class="title is-4">
+        <span class="has-text-weight-medium">App Version:</span> {{ version }}
       </h1>
       <h1 v-if="$store.state.update_available != null" class="title is-6">
-        <span class="has-text-weight-medium">App Update Available:</span>
+        <span class="has-text-weight-medium">Update Available:</span>
         {{ $store.state.update_available ? 'Yes' : 'No' }}
       </h1>
     </div>
@@ -18,7 +18,13 @@
 </template>
 
 <script>
-export default {}
+import config from '../nuxt.config'
+
+export default {
+  data: () => ({
+    version: config.app.version,
+  }),
+}
 </script>
 
 <style>

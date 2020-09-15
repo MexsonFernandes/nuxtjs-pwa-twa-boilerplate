@@ -8,7 +8,6 @@
 export default {
   async mounted() {
     this.$store.commit('checkUpdateAvailable', false)
-    this.$store.commit('createVersion', null)
     this.$store.commit('updateTime', null)
 
     const workbox = await window.$workbox
