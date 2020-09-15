@@ -22,7 +22,7 @@ A supporting respository for PWA developed in Nuxt.
 ## To-Do:
 - [ ] Online/Offline status page
 - [ ] Custom app installation UI
-- [ ] App version
+- [x] App version (currently uses package.json)
 
 ## Lighthouse Score sheet:
 
