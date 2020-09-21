@@ -24,6 +24,7 @@ export default {
 
     const workbox = await window.$workbox
     if (workbox) {
+      //
       workbox.addEventListener('installed', (event) => {
         // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
         if (event.isUpdate) {
@@ -52,6 +53,7 @@ export default {
           onClick: (e, toastObject) => {
             toastObject.goAway(0)
             // refresh the page
+            window.location.reload()
           },
         },
       })
