@@ -1,0 +1,16 @@
+.offline-alert {
+  background: rgb(41, 40, 40) !important;
+  color: #fff !important;
+}
+
+.offline-alert-indicator--offline {
+  background-color: #ea1111 !important;
+}
+
+.offline-alert-indicator--online {
+  background-color: rgb(59, 187, 0) !important;
+}
+
+.vc-btn {
+    color: #1a9508 !important;
+}

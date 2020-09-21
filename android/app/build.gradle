@@ -27,16 +27,16 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 // The hostname is used when building the intent-filter, so the TWA is able to
-                // handle Intents to open https:////nuxtjs-pwa-boilerplate.vercel.app/.
+                // handle Intents to open https://nuxtjs-pwa-boilerplate.vercel.app/.
                 hostName: "https://nuxtjs-pwa-boilerplate.vercel.app/",
-                defaultUrl: "https:////nuxtjs-pwa-boilerplate.vercel.app/",
+                defaultUrl: "https://nuxtjs-pwa-boilerplate.vercel.app/",
                 launcherName: "Nuxt TWA",
                 // This variable below expresses the relationship between the app and the site,
                 // as documented in the TWA documentation at
                 // https://developers.google.com/web/updates/2017/10/using-twa#set_up_digital_asset_links_in_an_android_app
                 // and is injected into the AndroidManifest.xml
                 assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"], ' +
-                        '"target": {"namespace": "web", "site": "https:////nuxtjs-pwa-boilerplate.vercel.app/"}}]'
+                        '"target": {"namespace": "web", "site": "https://nuxtjs-pwa-boilerplate.vercel.app/"}}]'
         ]
         resValue "color", "colorPrimary", "#fff"
     }

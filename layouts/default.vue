@@ -1,14 +1,26 @@
 <template>
   <div>
     <Nuxt />
+    <client-only>
+      <offline-alert
+        :offline-message="offlineMessage"
+        :online-message="onlineMessage"
+      />
+    </client-only>
+    <vue-confirm-dialog></vue-confirm-dialog>
   </div>
 </template>
 
 <script>
 export default {
+  data: () => ({
+    onlineMessage: 'You are online',
+    offlineMessage: 'You are offline',
+  }),
   async mounted() {
     this.$store.commit('checkUpdateAvailable', false)
     this.$store.commit('updateTime', null)
+    this.newUpdateAvailable()
 
     const workbox = await window.$workbox
     if (workbox) {
@@ -20,6 +32,30 @@ export default {
         }
       })
     }
+  },
+  methods: {
+    newUpdateAvailable() {
+      this.$confirm({
+        title: 'Wohoo!',
+        message: 'New update available',
+        button: {
+          yes: 'OK',
+        },
+      })
+      this.createUpdateToast()
+    },
+    createUpdateToast() {
+      this.$toasted.show('Update the current app', {
+        position: 'bottom-center',
+        action: {
+          text: 'Refresh',
+          onClick: (e, toastObject) => {
+            toastObject.goAway(0)
+            // refresh the page
+          },
+        },
+      })
+    },
   },
 }
 </script>
@@ -42,34 +78,5 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
 }
 </style>

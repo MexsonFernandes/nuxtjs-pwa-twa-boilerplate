@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Sun Sep 13 23:48:58 IST 2020
-0.baseType=DIRECTORY
-0.base=/home/robomex/Desktop/robomex/nuxt-pwa-updates/android/app/build/intermediates/transforms/dexMerger/debug/0
-0.path=classes.dex
-0.set=DEX
-count=1

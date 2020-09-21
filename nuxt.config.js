@@ -43,12 +43,15 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/css/style.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+    { src: 'plugins/offline-alert.js', ssr: false },
+    { src: 'plugins/confirm-dialog.js', ssr: false },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -68,11 +71,12 @@ export default {
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     '@nuxtjs/robots',
+    '@nuxtjs/toast',
     [
       'nuxt-twa-module',
       {
         /* module options */
-        defaultUrl: 'https:////nuxtjs-pwa-boilerplate.vercel.app/',
+        defaultUrl: 'https://nuxtjs-pwa-boilerplate.vercel.app/',
         hostName: 'https://nuxtjs-pwa-boilerplate.vercel.app/',
         applicationId: 'com.example.nuxt',
         launcherName: 'Nuxt TWA',
