@@ -23,11 +23,14 @@ export default {
     this.newUpdateAvailable()
 
     const workbox = await window.$workbox
+    console.log(workbox)
     if (workbox) {
       //
       workbox.addEventListener('installed', (event) => {
+        alert('app is installed!')
         // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
         if (event.isUpdate) {
+          alert('update available!')
           // whatever logic you want to use to notify the user that they need to refresh the page.
           this.$store.commit('checkUpdateAvailable', true)
         }
