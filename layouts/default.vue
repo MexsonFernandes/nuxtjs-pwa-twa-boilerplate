@@ -23,6 +23,7 @@ export default {
     this.newUpdateAvailable()
 
     const workbox = await window.$workbox
+    console.log(workbox)
     if (workbox) {
       //
       workbox.addEventListener('installed', (event) => {
