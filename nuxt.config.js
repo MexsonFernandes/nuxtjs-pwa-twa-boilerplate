@@ -118,8 +118,5 @@ export default {
       background_color: '#FFFFFF',
       theme_color: '#F8F8F8',
     },
-    workbox: {
-      importScripts: ['_nuxt/sw-precache.js'],
-    },
   },
 }

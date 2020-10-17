@@ -22,10 +22,7 @@ export default {
     this.$store.commit('updateTime', null)
 
     const workbox = await window.$workbox
-    console.log(workbox)
     if (workbox) {
-      workbox.precaching.precacheAndRoute(self.__precacheManifest)
-      //
       workbox.addEventListener('installed', (event) => {
         // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
         if (event.isUpdate) {
