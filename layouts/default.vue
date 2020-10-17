@@ -2,10 +2,7 @@
   <div>
     <Nuxt />
     <client-only>
-      <offline-alert
-        :offline-message="offlineMessage"
-        :online-message="onlineMessage"
-      />
+      <offline-alert :offline-message="offlineMessage" :online-message="onlineMessage" />
     </client-only>
     <vue-confirm-dialog></vue-confirm-dialog>
   </div>
@@ -20,7 +17,9 @@ export default {
   async mounted() {
     this.$store.commit('checkUpdateAvailable', false)
     this.$store.commit('updateTime', null)
-
+    document.addEventListener('swUpdated', this.newUpdateAvailable, {
+      once: true,
+    })
     const workbox = await window.$workbox
     if (workbox) {
       workbox.addEventListener('installed', (event) => {
