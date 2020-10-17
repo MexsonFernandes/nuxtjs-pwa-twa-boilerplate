@@ -14,7 +14,7 @@ export default {
     onlineMessage: 'You are online',
     offlineMessage: 'You are offline',
   }),
-  async mounted() {
+  mounted() {
     this.$store.commit('checkUpdateAvailable', false)
     this.$store.commit('updateTime', null)
     document.addEventListener('swUpdated', this.newUpdateAvailable, {
