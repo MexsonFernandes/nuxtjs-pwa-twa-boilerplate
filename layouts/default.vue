@@ -20,17 +20,17 @@ export default {
     document.addEventListener('swUpdated', this.newUpdateAvailable, {
       once: true,
     })
-    const workbox = await window.$workbox
-    if (workbox) {
-      workbox.addEventListener('installed', (event) => {
-        // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
-        if (event.isUpdate) {
-          this.newUpdateAvailable()
-          // whatever logic you want to use to notify the user that they need to refresh the page.
-          this.$store.commit('checkUpdateAvailable', true)
-        }
-      })
-    }
+    // const workbox = await window.$workbox
+    // if (workbox) {
+    //   workbox.addEventListener('installed', (event) => {
+    //     // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
+    //     if (event.isUpdate) {
+    //       this.newUpdateAvailable()
+    //       // whatever logic you want to use to notify the user that they need to refresh the page.
+    //       this.$store.commit('checkUpdateAvailable', true)
+    //     }
+    //   })
+    // }
   },
   methods: {
     newUpdateAvailable() {
