@@ -128,6 +128,6 @@ export default {
   },
   robots: {
     UserAgent: '*',
-    Allow: '/',
+    Disallow: '',
   },
 }
