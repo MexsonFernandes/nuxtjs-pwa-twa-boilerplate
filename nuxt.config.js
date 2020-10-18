@@ -126,4 +126,8 @@ export default {
     position: 'bottom-center',
     duration: 3000,
   },
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+  },
 }
