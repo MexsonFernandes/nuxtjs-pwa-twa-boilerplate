@@ -124,5 +124,6 @@ export default {
   },
   toast: {
     position: 'bottom-center',
+    duration: 3000,
   },
 }

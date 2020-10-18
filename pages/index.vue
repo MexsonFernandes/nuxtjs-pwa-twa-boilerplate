@@ -15,7 +15,7 @@
         {{ $store.state.update_available ? 'Yes' : 'No' }}
       </h1>
       <button
-        v-if="installAvailable"
+        v-if="$store.state.install_available"
         class="button is-primary"
         @click="appInstall"
       >
@@ -27,38 +27,12 @@
 
 <script>
 export default {
-  data: () => {
-    return {
-      deferredPrompt: null,
-      installAvailable: null,
-    }
-  },
-  created() {
-    if (process.browser) {
-      // eslint-disable-next-line nuxt/no-globals-in-created
-      window.addEventListener('beforeinstallprompt', (e) => {
-        // Prevent the mini-infobar from appearing on mobile
-        e.preventDefault()
-        // Stash the event so it can be triggered later.
-        this.deferredPrompt = e
-        // Update UI notify the user they can install the PWA
-        this.installAvailable = true
-      })
-
-      // eslint-disable-next-line nuxt/no-globals-in-created
-      window.addEventListener('appinstalled', (evt) => {
-        // Log install to analytics
-        console.log('INSTALL: Success')
-      })
-    }
-  },
   methods: {
     appInstall() {
-      // hideMyInstallPromotion()
-      // Show the install prompt
-      this.deferredPrompt.prompt()
+      // Show the install promp()
+      this.$store.state.deferred_prompt.prompt()
       // Wait for the user to respond to the prompt
-      this.deferredPrompt.userChoice.then((choiceResult) => {
+      this.$store.state.deferred_prompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           this.$toast.info('Installation started!')
         } else {
