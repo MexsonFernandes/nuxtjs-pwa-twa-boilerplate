@@ -118,5 +118,11 @@ export default {
       background_color: '#FFFFFF',
       theme_color: '#F8F8F8',
     },
+    workbox: {
+      dev: true,
+    },
+  },
+  toast: {
+    position: 'bottom-center',
   },
 }

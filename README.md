@@ -28,3 +28,9 @@ A supporting respository for PWA developed in Nuxt.
 ## Lighthouse Score sheet:
 
 <img src='static/lighthouse.png' />
+
+
+## References
+
+1. https://web.dev/customize-install/
+2. https://pwa.nuxtjs.org/workbox

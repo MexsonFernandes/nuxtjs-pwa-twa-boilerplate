@@ -2,7 +2,10 @@
   <div>
     <Nuxt />
     <client-only>
-      <offline-alert :offline-message="offlineMessage" :online-message="onlineMessage" />
+      <offline-alert
+        :offline-message="offlineMessage"
+        :online-message="onlineMessage"
+      />
     </client-only>
     <vue-confirm-dialog></vue-confirm-dialog>
   </div>
@@ -14,23 +17,38 @@ export default {
     onlineMessage: 'You are online',
     offlineMessage: 'You are offline',
   }),
-  mounted() {
+  async mounted() {
     this.$store.commit('checkUpdateAvailable', false)
     this.$store.commit('updateTime', null)
-    document.addEventListener('swUpdated', this.newUpdateAvailable, {
-      once: true,
+
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.update().then(() => {
+        console.log('update ava')
+      })
     })
-    // const workbox = await window.$workbox
-    // if (workbox) {
-    //   workbox.addEventListener('installed', (event) => {
-    //     // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
-    //     if (event.isUpdate) {
-    //       this.newUpdateAvailable()
-    //       // whatever logic you want to use to notify the user that they need to refresh the page.
-    //       this.$store.commit('checkUpdateAvailable', true)
-    //     }
-    //   })
-    // }
+
+    const workbox = await window.$workbox
+    console.log(workbox)
+    if (workbox) {
+      workbox.addEventListener('installed', (event) => {
+        console.log('app isa instaled')
+        console.log(event)
+        workbox.addEventListener('statechange', () => {
+          // Has network.state changed?
+          if (workbox.state) {
+            console.log('update')
+          }
+          console.log()
+        })
+        // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
+        if (event.isUpdate) {
+          console.log('update ava')
+          this.newUpdateAvailable()
+          // whatever logic you want to use to notify the user that they need to refresh the page.
+          this.$store.commit('checkUpdateAvailable', true)
+        }
+      })
+    }
   },
   methods: {
     newUpdateAvailable() {
