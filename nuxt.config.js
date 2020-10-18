@@ -26,6 +26,7 @@ export default {
     title: 'Nuxt PWA + TWA',
     meta: [
       { charset: 'utf-8' },
+      { name: 'robots', content: 'all' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
