@@ -13,23 +13,58 @@
 
 <script>
 export default {
-  data: () => ({
-    onlineMessage: 'You are online',
-    offlineMessage: 'You are offline',
-  }),
+  data: () => {
+    return {
+      onlineMessage: 'You are online',
+      offlineMessage: 'You are offline',
+      deferredPrompt: null,
+    }
+  },
   async mounted() {
     this.$store.commit('checkUpdateAvailable', false)
     this.$store.commit('updateTime', null)
 
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.update().then(() => {
+        console.log('update ava')
+      })
+    })
+
     const workbox = await window.$workbox
     if (workbox) {
       workbox.addEventListener('installed', (event) => {
+        this.$store.commit('checkInstallAvailable', false)
+        workbox.addEventListener('statechange', () => {
+          // Has network.state changed?
+          if (workbox.state) {
+            console.log('update')
+          }
+        })
         // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
         if (event.isUpdate) {
           this.newUpdateAvailable()
           // whatever logic you want to use to notify the user that they need to refresh the page.
           this.$store.commit('checkUpdateAvailable', true)
         }
+      })
+    }
+  },
+  created() {
+    if (process.browser) {
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault()
+        // Stash the event so it can be triggered later.
+        this.$store.commit('createDeferredPrompt', e)
+        // Update UI notify the user they can install the PWA
+        this.$store.commit('checkInstallAvailable', true)
+      })
+
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      window.addEventListener('appinstalled', (evt) => {
+        this.$store.commit('checkInstallAvailable', false)
+        this.$toast.success('App is installed!')
       })
     }
   },
@@ -47,6 +82,7 @@ export default {
     createUpdateToast() {
       this.$toasted.show('Update the current app', {
         position: 'bottom-center',
+        duration: null,
         action: {
           text: 'Refresh',
           onClick: (e, toastObject) => {

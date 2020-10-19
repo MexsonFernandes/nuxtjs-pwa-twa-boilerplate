@@ -4,7 +4,7 @@
       <Logo />
       <h1 class="title is-1">{{ $store.state.app_name }}</h1>
       <h1 v-if="$store.state.update_time" class="title is-2">
-        Last Update: {{ $store.state.update_time }}
+        Last Updates: {{ $store.state.update_time }}
       </h1>
       <h1 v-if="$store.state.app_version" class="title is-4">
         <span class="has-text-weight-medium">App Version:</span>
@@ -14,12 +14,34 @@
         <span class="has-text-weight-medium">Update Available:</span>
         {{ $store.state.update_available ? 'Yes' : 'No' }}
       </h1>
+      <button
+        v-if="$store.state.install_available"
+        class="button is-primary"
+        @click="appInstall"
+      >
+        Install App
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    appInstall() {
+      // Show the install promp()
+      this.$store.state.deferred_prompt.prompt()
+      // Wait for the user to respond to the prompt
+      this.$store.state.deferred_prompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          this.$toast.info('Installation started!')
+        } else {
+          this.$toast.error('Installation canceled!')
+        }
+      })
+    },
+  },
+}
 </script>
 
 <style>

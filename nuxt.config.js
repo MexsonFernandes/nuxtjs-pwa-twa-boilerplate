@@ -26,6 +26,7 @@ export default {
     title: 'Nuxt PWA + TWA',
     meta: [
       { charset: 'utf-8' },
+      { name: 'robots', content: 'all' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
@@ -118,5 +119,16 @@ export default {
       background_color: '#FFFFFF',
       theme_color: '#F8F8F8',
     },
+    workbox: {
+      dev: true,
+    },
+  },
+  toast: {
+    position: 'bottom-center',
+    duration: 3000,
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
   },
 }
