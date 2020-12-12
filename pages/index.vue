@@ -5,6 +5,7 @@
       <h1 class="title is-1">{{ $store.state.app_name }}</h1>
       <h1 v-if="$store.state.update_time" class="title is-2">
         Last Updates: {{ $store.state.update_time }}
+        here
       </h1>
       <h1 v-if="$store.state.app_version" class="title is-4">
         <span class="has-text-weight-medium">App Version:</span>
