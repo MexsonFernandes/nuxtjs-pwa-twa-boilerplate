@@ -12,7 +12,7 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  ssr: false,
+  ssr: true,
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -121,6 +121,10 @@ export default {
     },
     workbox: {
       dev: true,
+      debug: true,
+    },
+    modifyUrlPrefix: {
+      '/': '/_nuxt/',
     },
   },
   toast: {
