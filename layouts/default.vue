@@ -20,7 +20,7 @@ export default {
       deferredPrompt: null,
     }
   },
-  async mounted() {
+  mounted() {
     this.$store.commit('checkUpdateAvailable', false)
     this.$store.commit('updateTime', null)
 
@@ -41,20 +41,8 @@ export default {
         })
       })
     })
-
-    const workbox = await window.$workbox
-    if (workbox) {
-      workbox.addEventListener('installed', (event) => {
-        console.log('app is insta')
-        this.$store.commit('checkInstallAvailable', false)
-        if (event.isUpdate) {
-          // whatever logic you want to use to notify the user that they need to refresh the page.
-          console.log('there is update')
-        }
-      })
-    }
   },
-  created() {
+  async created() {
     if (process.browser) {
       // eslint-disable-next-line nuxt/no-globals-in-created
       window.addEventListener('beforeinstallprompt', (e) => {
@@ -71,6 +59,19 @@ export default {
         this.$store.commit('checkInstallAvailable', false)
         this.$toast.success('App is installed!')
       })
+
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      const workbox = await window.$workbox
+      if (workbox) {
+        workbox.addEventListener('installed', (event) => {
+          console.log('app is insta')
+          this.$store.commit('checkInstallAvailable', false)
+          if (event.isUpdate) {
+            // whatever logic you want to use to notify the user that they need to refresh the page.
+            console.log('there is update')
+          }
+        })
+      }
     }
   },
   methods: {
