@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <Logo />
+      e
       <h1 class="title is-1">{{ $store.state.app_name }}</h1>
       <h1 v-if="$store.state.update_time" class="title is-2">
         Last Updates: {{ $store.state.update_time }}
