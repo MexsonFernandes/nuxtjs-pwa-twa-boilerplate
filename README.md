@@ -21,7 +21,6 @@ A supporting respository for PWA developed in Nuxt.
 
 ## To-Do:
 - [x] Online/Offline status page
-- [ ] Custom app installation UI
 - [ ] Update available alert
 - [x] App version (currently uses package.json)
 
