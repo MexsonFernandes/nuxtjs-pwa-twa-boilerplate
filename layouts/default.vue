@@ -45,7 +45,12 @@ export default {
     const workbox = await window.$workbox
     if (workbox) {
       workbox.addEventListener('installed', (event) => {
+        console.log('app is insta')
         this.$store.commit('checkInstallAvailable', false)
+        if (event.isUpdate) {
+          // whatever logic you want to use to notify the user that they need to refresh the page.
+          console.log('there is update')
+        }
       })
     }
   },
