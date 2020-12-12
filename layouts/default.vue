@@ -31,8 +31,11 @@ export default {
         newWorker.addEventListener('statechange', () => {
           switch (newWorker.state) {
             case 'installed':
-              this.newUpdateAvailable()
-              this.$store.commit('checkUpdateAvailable', true)
+              // check for new service worker
+              if (navigator.serviceWorker.controller) {
+                this.newUpdateAvailable()
+                this.$store.commit('checkUpdateAvailable', true)
+              }
               break
           }
         })
