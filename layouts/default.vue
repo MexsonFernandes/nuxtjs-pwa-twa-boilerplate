@@ -25,8 +25,17 @@ export default {
     this.$store.commit('updateTime', null)
 
     navigator.serviceWorker.ready.then((registration) => {
-      registration.update().then(() => {
-        console.log('update ava')
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing
+
+        newWorker.addEventListener('statechange', () => {
+          switch (newWorker.state) {
+            case 'installed':
+              this.newUpdateAvailable()
+              this.$store.commit('checkUpdateAvailable', true)
+              break
+          }
+        })
       })
     })
 
@@ -34,18 +43,6 @@ export default {
     if (workbox) {
       workbox.addEventListener('installed', (event) => {
         this.$store.commit('checkInstallAvailable', false)
-        workbox.addEventListener('statechange', () => {
-          // Has network.state changed?
-          if (workbox.state) {
-            console.log('update')
-          }
-        })
-        // If we don't do this we'll be displaying the notification after the initial installation, which isn't perferred.
-        if (event.isUpdate) {
-          this.newUpdateAvailable()
-          // whatever logic you want to use to notify the user that they need to refresh the page.
-          this.$store.commit('checkUpdateAvailable', true)
-        }
       })
     }
   },
