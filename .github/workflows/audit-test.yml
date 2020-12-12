@@ -11,7 +11,7 @@ jobs:
       - name: Audit live URL
         uses: jakejarvis/lighthouse-action@master
         with:
-          url: https://nuxtjs-pwa-boilerplate.vercel.app
+          url: https://nuxtjs-pwa-twa-boilerplate.vercel.app
       - name: Upload results as an artifact
         uses: actions/upload-artifact@master
         with:
