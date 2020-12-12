@@ -24,54 +24,52 @@ export default {
     this.$store.commit('checkUpdateAvailable', false)
     this.$store.commit('updateTime', null)
 
-    navigator.serviceWorker.ready.then((registration) => {
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing
+    // navigator.serviceWorker.ready.then((registration) => {
+    //   registration.addEventListener('updatefound', () => {
+    //     const newWorker = registration.installing
 
-        newWorker.addEventListener('statechange', () => {
-          switch (newWorker.state) {
-            case 'installed':
-              // check for new service worker
-              if (navigator.serviceWorker.controller) {
-                this.newUpdateAvailable()
-                this.$store.commit('checkUpdateAvailable', true)
-              }
-              break
-          }
-        })
-      })
-    })
+    //     newWorker.addEventListener('statechange', () => {
+    //       switch (newWorker.state) {
+    //         case 'installed':
+    //           // check for new service worker
+    //           if (navigator.serviceWorker.controller) {
+    //             this.newUpdateAvailable()
+    //             this.$store.commit('checkUpdateAvailable', true)
+    //           }
+    //           break
+    //       }
+    //     })
+    //   })
+    // })
   },
   async created() {
-    if (process.browser) {
-      // eslint-disable-next-line nuxt/no-globals-in-created
-      window.addEventListener('beforeinstallprompt', (e) => {
-        // Prevent the mini-infobar from appearing on mobile
-        e.preventDefault()
-        // Stash the event so it can be triggered later.
-        this.$store.commit('createDeferredPrompt', e)
-        // Update UI notify the user they can install the PWA
-        this.$store.commit('checkInstallAvailable', true)
-      })
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent the mini-infobar from appearing on mobile
+      e.preventDefault()
+      // Stash the event so it can be triggered later.
+      this.$store.commit('createDeferredPrompt', e)
+      // Update UI notify the user they can install the PWA
+      this.$store.commit('checkInstallAvailable', true)
+    })
 
-      // eslint-disable-next-line nuxt/no-globals-in-created
-      window.addEventListener('appinstalled', (evt) => {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    window.addEventListener('appinstalled', (evt) => {
+      this.$store.commit('checkInstallAvailable', false)
+      this.$toast.success('App is installed!')
+    })
+
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    const workbox = await window.$workbox
+    if (workbox) {
+      workbox.addEventListener('installed', (event) => {
+        console.log('app is insta')
         this.$store.commit('checkInstallAvailable', false)
-        this.$toast.success('App is installed!')
+        if (event.isUpdate) {
+          // whatever logic you want to use to notify the user that they need to refresh the page.
+          console.log('there is update')
+        }
       })
-
-      // eslint-disable-next-line nuxt/no-globals-in-created
-      const workbox = await window.$workbox
-      if (workbox) {
-        workbox.addEventListener('installed', (event) => {
-          console.log('app is insta')
-          this.$store.commit('checkInstallAvailable', false)
-          if (event.isUpdate) {
-            // whatever logic you want to use to notify the user that they need to refresh the page.
-            console.log('there is update')
-          }
-        })
-      }
     }
   },
   methods: {
